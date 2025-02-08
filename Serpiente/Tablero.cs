@@ -148,14 +148,15 @@ namespace Serpiente
         {
             bool NoSeRepiten = true;
             int intentos = 0;
+            Random random = new Random();
             do
             {
                 NoSeRepiten = true;
 
                 HashSet<(int, int)> conjunto = new HashSet<(int, int)>();
 
-                Objeto.x = new Random().Next(0, AnchoTablero - 1);
-                Objeto.y = new Random().Next(0, AltoTablero - 1);
+                Objeto.x = random.Next(0, AnchoTablero - 1);
+                Objeto.y = random.Next(0, AltoTablero - 1);
 
                 Objetos.Add(Objeto);
 
@@ -165,14 +166,15 @@ namespace Serpiente
                     {
                         // hay duplicados
                         NoSeRepiten = false;
+                        break;
                     }
                 }
 
                 if (!NoSeRepiten)
                     Objetos.RemoveAt(Objetos.Count - 1);
-                intentos++;
+
             }
-            while (CabezaSerpX == Objeto.x && CabezaSerpY == Objeto.y || !NoSeRepiten || intentos != 5);
+            while (CabezaSerpX == Objeto.x && CabezaSerpY == Objeto.y || !NoSeRepiten);
         }
 
         public void RemoverObjeto(Objetos Objeto)
