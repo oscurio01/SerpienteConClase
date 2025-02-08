@@ -147,6 +147,7 @@ namespace Serpiente
         public void CrearObjeto( Objetos Objeto)
         {
             bool NoSeRepiten = true;
+            int intentos = 0;
             do
             {
                 NoSeRepiten = true;
@@ -169,8 +170,9 @@ namespace Serpiente
 
                 if (!NoSeRepiten)
                     Objetos.RemoveAt(Objetos.Count - 1);
+                intentos++;
             }
-            while (CabezaSerpX == Objeto.x && CabezaSerpY == Objeto.y || !NoSeRepiten);
+            while (CabezaSerpX == Objeto.x && CabezaSerpY == Objeto.y || !NoSeRepiten || intentos != 5);
         }
 
         public void RemoverObjeto(Objetos Objeto)

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Serpiente
 {
-    internal class Serpiente3_0
+    internal class Programa
     {
         static bool Salir = false;
         static Tablero tablero;
