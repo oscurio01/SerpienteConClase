@@ -28,7 +28,6 @@ namespace Serpiente
 
             AnchoTablero = LeerUnNumeroCorrecto(200, 5);
 
-
             Console.WriteLine("Dime el ancho del tablero");
 
             AltoTablero = LeerUnNumeroCorrecto(50, 5);
@@ -118,8 +117,6 @@ namespace Serpiente
                 Console.Write('=');
             }
             Console.WriteLine('+');
-
-
         }
 
         void PintarObjetos()
@@ -147,7 +144,6 @@ namespace Serpiente
         public void CrearObjeto( Objetos Objeto)
         {
             bool NoSeRepiten = true;
-            int intentos = 0;
             Random random = new Random();
             do
             {

@@ -12,7 +12,7 @@ namespace Serpiente
         public int y { get; set; }
         public char simbolo { get; set; }
 
-        public Tablero tablero;
+        protected Tablero tablero;
 
         public Objetos(Tablero tablero)
         {

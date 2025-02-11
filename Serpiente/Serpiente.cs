@@ -12,6 +12,7 @@ namespace Serpiente
         public int Direccion = 0;
         public int TamanyoSerpiente = 1;
         public int TamanyoMaximoSerpiente = 4;
+
         public List<(int, int)> Partes = new List<(int x, int y)>();
 
         int x;
